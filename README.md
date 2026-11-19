@@ -9,10 +9,10 @@ Design reference: the approved mockups on the "TTM Academy – Kajabi course red
 ## Install (once per course)
 
 1. In Kajabi: **Products → [course] → Customize → (template) Customize → Settings → Custom Code**.
-2. Paste this into **Embedded Scripts** (change the version to the latest tag):
+2. Paste this into **Embedded Scripts**. The part after `@` pins a version: a commit ID or a release tag (see Making changes).
 
    ```html
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rebeccanguyen/ttm-kajabi-theme@v1.0.0/ttm.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rebeccanguyen/ttm-kajabi-theme@COMMIT_OR_TAG/ttm.css">
    ```
 
 3. Click **Preview** and check the course page and a lesson page before you click **Save**.
@@ -33,10 +33,10 @@ IMS Self-Paced has a second, inactive template installed. Add the tag to that te
 ## Making changes
 
 1. Edit `ttm.css` and commit.
-2. Create a new tag (`v1.0.1`, `v1.1.0` …) and push it.
-3. Update the version in each course's Embedded Scripts tag.
+2. Pin the new version: either copy the commit ID, or create a release on GitHub (**Releases → Draft a new release**, tag `v1.0.1`, `v1.1.0` …).
+3. Update the part after `@` in each course's Embedded Scripts tag.
 
-Pinning a version tag means changes only go live when you choose. Pointing at `@main` instead updates automatically, but jsDelivr caches branches for several hours.
+Pinning a commit or tag means changes only go live when you choose. Pointing at `@main` instead updates automatically, but jsDelivr caches branches for several hours.
 
 ## What CSS can't change on Growth
 
