@@ -26,7 +26,7 @@ Courses to install on:
 - [x] Retirement Made Simple (Self Paced): Premier 7.11.0
 - [x] Retirement Made Simple – Live, Live Cohort 1: Premier 7.10.4
 
-Live version: `181f6562bf61a09b898d02ca2d3134b81bbcfbdc` (19 Nov 2026).
+Live version: `39702b2ee4848f61716b9bc620f6f9a9ba2352e7` (19 Nov 2026).
 
 New cohorts get their own course template, so add the tag to each new cohort's template too.
 
