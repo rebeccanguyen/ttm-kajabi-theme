@@ -1,0 +1,342 @@
+/* ==========================================================================
+   TTM Academy – Kajabi course styles
+   For Kajabi's "Premier" product template (v7.x)
+   Loaded via each course's Custom Code → Embedded Scripts (see README.md)
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Open+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --ttm-beige: #f8f2e9;
+  --ttm-light-green: #d5f4d9;
+  --ttm-forest: #074730;
+  --ttm-green: #039136;
+  --ttm-lime: #c1ff72;
+  --ttm-ink: #111111;
+  --ttm-muted: #4a4339;
+  --ttm-line: #e8e0d3;
+  --ttm-border: #cfc6b8;
+  --ttm-heading: "Bricolage Grotesque", "Open Sans", system-ui, sans-serif;
+  --ttm-body: "Open Sans", system-ui, sans-serif;
+  --ttm-radius-lg: 24px;
+  --ttm-radius-md: 16px;
+  --ttm-radius-sm: 12px;
+  --ttm-shadow: 0 1px 2px rgba(7, 71, 48, 0.06), 0 8px 24px rgba(7, 71, 48, 0.05);
+}
+
+/* ---------- Base ---------- */
+
+body {
+  background: var(--ttm-beige) !important;
+  color: var(--ttm-ink);
+  font-family: var(--ttm-body) !important;
+}
+
+body h1, body h2, body h3, body h4,
+body .panel__heading,
+body .syllabus__heading {
+  font-family: var(--ttm-heading) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+}
+
+body .section--global,
+body .content-wrap {
+  background: var(--ttm-beige);
+}
+
+body a { color: var(--ttm-forest); }
+body a:hover { color: var(--ttm-green); }
+
+/* ---------- Header ---------- */
+
+body .header {
+  background: var(--ttm-forest) !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+body .header .logo img {
+  max-height: 44px;
+  width: auto;
+}
+
+body .header-menu a,
+body .header-menu .search__toggle {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+body .header-menu a:hover { color: #fff !important; }
+
+body .header-ham span { background: #fff !important; }
+
+body .user__avatar {
+  border: 2px solid var(--ttm-light-green);
+  border-radius: 999px;
+}
+
+body .user__dropdown {
+  border-radius: var(--ttm-radius-sm);
+  box-shadow: var(--ttm-shadow);
+  overflow: hidden;
+}
+
+body .user__dropdown a { color: var(--ttm-ink) !important; }
+
+/* ---------- Course hero ---------- */
+
+body .hero-background.background-image--product_hero {
+  background-image: none !important;
+  background-color: var(--ttm-forest) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body .section--product_hero {
+  background: transparent !important;
+  padding-top: 56px !important;
+  padding-bottom: 64px !important;
+}
+
+body .section--product_hero h1 {
+  color: #fff !important;
+  font-size: clamp(36px, 5vw, 56px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.03em;
+}
+
+body .section--product_hero p {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* ---------- Buttons ---------- */
+
+body .btn {
+  border-radius: 999px !important;
+  font-family: var(--ttm-body) !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+body .btn--solid,
+body .btn--comment {
+  background: var(--ttm-ink) !important;
+  border-color: var(--ttm-ink) !important;
+  color: #fff !important;
+}
+
+body .btn--solid:hover,
+body .btn--comment:hover {
+  background: var(--ttm-forest) !important;
+  border-color: var(--ttm-forest) !important;
+}
+
+/* Hero CTA ("Resume Course") is white on the green hero */
+body .section--product_hero .btn-cta {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: var(--ttm-ink) !important;
+  padding: 15px 30px !important;
+}
+
+body .section--product_hero .btn-cta:hover {
+  background: var(--ttm-lime) !important;
+  border-color: var(--ttm-lime) !important;
+}
+
+body .btn--outline,
+body .btn--completion {
+  background: transparent !important;
+  border: 1.5px solid var(--ttm-forest) !important;
+  color: var(--ttm-forest) !important;
+}
+
+body .btn--completion:hover {
+  background: var(--ttm-light-green) !important;
+}
+
+/* ---------- Panels (cards) ---------- */
+
+body .panel {
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: var(--ttm-radius-lg) !important;
+  box-shadow: var(--ttm-shadow) !important;
+  overflow: hidden;
+}
+
+body .panel__body { padding: 24px 28px !important; }
+
+/* ---------- Course outline (syllabus) ---------- */
+
+body .syllabus { margin-bottom: 16px !important; }
+
+body .syllabus > .panel__body > .syllabus__heading {
+  font-size: 20px !important;
+  color: var(--ttm-ink) !important;
+  margin-bottom: 12px !important;
+}
+
+/* Sub-module headings ("Session 1: Videos") */
+body .syllabus__item--sub > .syllabus__heading {
+  font-family: var(--ttm-body) !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+  color: var(--ttm-green) !important;
+  margin: 16px 0 8px !important;
+}
+
+body .syllabus__item > a {
+  display: block;
+  border-radius: var(--ttm-radius-sm);
+  padding: 10px 12px;
+  margin: 0 -12px;
+  transition: background-color 0.15s ease;
+}
+
+body .syllabus__item > a:hover { background: var(--ttm-beige); }
+
+body .syllabus__img img,
+body .syllabus__img .thumb {
+  border-radius: 10px;
+}
+
+body .syllabus__title {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  color: var(--ttm-ink) !important;
+  margin-bottom: 2px !important;
+}
+
+body .syllabus__text {
+  color: var(--ttm-muted) !important;
+  font-size: 14px !important;
+}
+
+/* ---------- Sidebar progress ---------- */
+
+body .section__sidebar .panel--light {
+  background: var(--ttm-light-green) !important;
+}
+
+body .section__sidebar .panel__heading {
+  font-size: 18px !important;
+  color: var(--ttm-forest) !important;
+}
+
+body .progress__bar {
+  height: 8px !important;
+  background: rgba(7, 71, 48, 0.12) !important;
+  border-radius: 999px !important;
+  overflow: hidden;
+}
+
+body .progress__fill {
+  background: var(--ttm-green) !important;
+  border-radius: 999px !important;
+}
+
+/* ---------- Lesson page ---------- */
+
+body .breadcrumbs { font-size: 14px; }
+body .breadcrumbs__crumb a { color: var(--ttm-forest) !important; font-weight: 600; }
+
+body .player {
+  border-radius: var(--ttm-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--ttm-shadow);
+}
+
+body .player__video { background: #0b2f22; }
+
+body .player__playlist,
+body .playlist {
+  background: #fff !important;
+}
+
+body .playlist__title {
+  background: var(--ttm-forest) !important;
+  color: #fff !important;
+}
+
+body .playlist__title h2,
+body .playlist__title h3 {
+  color: #fff !important;
+}
+
+body .playlist__title h3 {
+  font-family: var(--ttm-body) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: var(--ttm-lime) !important;
+}
+
+body .track {
+  border-bottom: 1px solid var(--ttm-line) !important;
+  color: var(--ttm-ink) !important;
+}
+
+body .track:hover { background: var(--ttm-beige) !important; }
+
+body .track--active {
+  background: var(--ttm-light-green) !important;
+}
+
+body .track--active .track__title { font-weight: 700; }
+
+body .track__count.active,
+body .track--active .track__count {
+  color: var(--ttm-forest) !important;
+}
+
+body .track__thumb { border-radius: 8px; }
+
+body .player__nav {
+  background: #fff !important;
+  border-top: 1px solid var(--ttm-line);
+}
+
+body .player__nav p { color: var(--ttm-muted) !important; font-weight: 600; }
+
+/* ---------- Comments ---------- */
+
+body #new_comment textarea,
+body .form-control {
+  border: 1.5px solid var(--ttm-border) !important;
+  border-radius: var(--ttm-radius-sm) !important;
+  font-family: var(--ttm-body) !important;
+}
+
+body #new_comment textarea:focus,
+body .form-control:focus {
+  border-color: var(--ttm-forest) !important;
+  box-shadow: 0 0 0 3px var(--ttm-lime) !important;
+}
+
+/* ---------- Footer ---------- */
+
+body .footer {
+  background: var(--ttm-forest) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+body .footer a,
+body .footer .social-icons__icon {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* ---------- Accessibility ---------- */
+
+body a:focus-visible,
+body .btn:focus-visible {
+  outline: 3px solid var(--ttm-lime) !important;
+  outline-offset: 2px;
+}
