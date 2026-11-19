@@ -16,6 +16,7 @@
   --ttm-muted: #4a4339;
   --ttm-line: #e8e0d3;
   --ttm-border: #cfc6b8;
+  --ttm-hover: rgba(17, 17, 17, 0.035);
   --ttm-heading: "Bricolage Grotesque", "Open Sans", system-ui, sans-serif;
   --ttm-body: "Open Sans", system-ui, sans-serif;
   --ttm-radius-lg: 24px;
@@ -131,10 +132,19 @@ body .btn--comment {
   color: #fff !important;
 }
 
+/* All buttons: lime background, black text on hover */
+body .btn:hover,
+body .btn:focus-visible,
 body .btn--solid:hover,
 body .btn--comment:hover {
-  background: var(--ttm-forest) !important;
-  border-color: var(--ttm-forest) !important;
+  background: var(--ttm-lime) !important;
+  border-color: var(--ttm-lime) !important;
+  color: var(--ttm-ink) !important;
+}
+
+body .btn:hover i,
+body .btn:hover .fa {
+  color: var(--ttm-ink) !important;
 }
 
 /* Hero CTA ("Resume Course") is white on the green hero */
@@ -148,6 +158,7 @@ body .section--product_hero .btn-cta {
 body .section--product_hero .btn-cta:hover {
   background: var(--ttm-lime) !important;
   border-color: var(--ttm-lime) !important;
+  color: var(--ttm-ink) !important;
 }
 
 body .btn--outline,
@@ -158,7 +169,9 @@ body .btn--completion {
 }
 
 body .btn--completion:hover {
-  background: var(--ttm-light-green) !important;
+  background: var(--ttm-lime) !important;
+  border-color: var(--ttm-lime) !important;
+  color: var(--ttm-ink) !important;
 }
 
 /* ---------- Panels (cards) ---------- */
@@ -199,10 +212,15 @@ body .syllabus__item > a {
   border-radius: var(--ttm-radius-sm);
   padding: 10px 12px;
   margin: 0 -12px;
-  transition: background-color 0.15s ease;
+  background-color: transparent;
+  transition: background-color 0.25s ease;
 }
 
-body .syllabus__item > a:hover { background: var(--ttm-beige); }
+/* Lessons: very faint grey on hover */
+body .syllabus__item > a:hover,
+body .syllabus__item > a:focus-visible {
+  background-color: var(--ttm-hover) !important;
+}
 
 body .syllabus__img img,
 body .syllabus__img .thumb {
@@ -284,7 +302,8 @@ body .track {
   color: var(--ttm-ink) !important;
 }
 
-body .track:hover { background: var(--ttm-beige) !important; }
+body .track { transition: background-color 0.25s ease; }
+body .track:hover { background: var(--ttm-hover) !important; }
 
 body .track--active {
   background: var(--ttm-light-green) !important;
