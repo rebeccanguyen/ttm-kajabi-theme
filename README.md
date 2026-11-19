@@ -21,10 +21,14 @@ Also in the template settings: replace the header logo with the transparent TTM 
 
 Courses to install on:
 
-- [ ] Investing Made Simple (Self-Paced)
-- [ ] Investing Made Simple (Live)
-- [ ] Retirement Made Simple (Self Paced)
-- [ ] Retirement Made Simple – Live
+- [x] Investing Made Simple (Self-Paced): Premier 7.11.0
+- [x] Investing Made Simple (Live), Cohort 1: Premier 7.11.0
+- [x] Retirement Made Simple (Self Paced): Premier 7.11.0
+- [x] Retirement Made Simple – Live, Live Cohort 1: Premier 7.10.4
+
+Live version: `181f6562bf61a09b898d02ca2d3134b81bbcfbdc` (19 Nov 2026).
+
+New cohorts get their own course template, so add the tag to each new cohort's template too.
 
 ## Testing safely
 
