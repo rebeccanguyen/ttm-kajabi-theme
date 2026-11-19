@@ -672,3 +672,14 @@ body .footer .copyright,
 body .powered-by a {
   color: rgba(255, 255, 255, 0.75) !important;
 }
+
+/* Login page: show the logo once (in the brand panel), not in header/footer */
+body:has(#section-login) .header__block--logo,
+body:has(#section-login) .footer .logo {
+  display: none !important;
+}
+
+/* On phones the brand panel is hidden, so keep the header logo there */
+@media (max-width: 900px) {
+  body:has(#section-login) .header__block--logo { display: block !important; }
+}
