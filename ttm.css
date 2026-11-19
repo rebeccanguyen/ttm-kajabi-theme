@@ -1,7 +1,8 @@
 /* ==========================================================================
    TTM Academy – Kajabi course styles
-   For Kajabi's "Premier" product template (v7.x)
-   Loaded via each course's Custom Code → Embedded Scripts (see README.md)
+   Course pages: Kajabi "Premier" product template (v7.x)
+   Login + library: Kajabi "Streamlined Home" website template (Encore 2.x)
+   Loaded via Custom Code / Page Scripts (see README.md)
    ========================================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Open+Sans:wght@400;600;700&display=swap");
@@ -443,4 +444,231 @@ body a:focus-visible,
 body .btn:focus-visible {
   outline: 3px solid var(--ttm-lime) !important;
   outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+   WEBSITE PAGES (Encore / Streamlined Home): header, login, library, footer
+   ========================================================================== */
+
+/* ---------- Encore header ---------- */
+
+body .header__content,
+body .header__content--mobile {
+  background: var(--ttm-forest) !important;
+}
+
+body .header__content .logo__image {
+  max-height: 44px !important;
+  width: auto;
+}
+
+body .header__content .link-list__link,
+body .header__content .user__login a {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+}
+
+body .header__content .link-list__link:hover { color: #fff !important; }
+
+body .hamburger__slice { background: #fff !important; }
+
+body .dropdown__menu {
+  border-radius: var(--ttm-radius-sm) !important;
+  box-shadow: var(--ttm-shadow) !important;
+}
+
+body .dropdown__menu a { color: var(--ttm-ink) !important; }
+
+/* ---------- Login page ---------- */
+
+body #section-login .section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: calc(100vh - 80px);
+  padding: 0 !important;
+  background: var(--ttm-beige) !important;
+}
+
+/* Brand panel (image holds the approved left-hand design) */
+body #section-login .section::before {
+  content: "";
+  display: block;
+  background: var(--ttm-forest) url("assets/login-panel.jpg") center / contain no-repeat;
+}
+
+body #section-login .section__overlay { display: none !important; }
+
+body #section-login .sizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 32px !important;
+  min-height: 0 !important;
+}
+
+body #section-login .container { max-width: 460px !important; padding: 0 !important; }
+body #section-login .row { margin: 0 !important; }
+
+body #section-login .col-6 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+body .auth__title {
+  font-family: var(--ttm-heading) !important;
+  font-weight: 800 !important;
+  font-size: 40px !important;
+  letter-spacing: -0.02em !important;
+  color: var(--ttm-ink) !important;
+  margin-bottom: 28px !important;
+}
+
+body .auth__label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--ttm-ink) !important;
+}
+
+body .auth__field,
+body #section-login .form-control {
+  height: 52px !important;
+  border: 1.5px solid var(--ttm-border) !important;
+  border-radius: var(--ttm-radius-sm) !important;
+  background: #fff !important;
+  padding: 0 16px !important;
+  font-size: 16px !important;
+  box-shadow: none !important;
+}
+
+body .auth__field:focus {
+  border-color: var(--ttm-forest) !important;
+  box-shadow: 0 0 0 3px var(--ttm-lime) !important;
+  outline: none !important;
+}
+
+body .form-btn,
+body #section-login .btn--solid {
+  width: 100% !important;
+  height: 56px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: var(--ttm-ink) !important;
+  color: #fff !important;
+  font-family: var(--ttm-body) !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  margin-top: 8px !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+body .form-btn:hover,
+body .form-btn:focus-visible {
+  background: var(--ttm-lime) !important;
+  color: var(--ttm-ink) !important;
+}
+
+body #section-login .divider { color: var(--ttm-muted) !important; }
+
+body #section-login .gsi-material-button {
+  width: 100% !important;
+  max-width: none !important;
+  height: 52px !important;
+  border-radius: 999px !important;
+  border: 1.5px solid var(--ttm-border) !important;
+}
+
+body .auth__link { text-align: center; margin-top: 20px !important; }
+body .auth__link a { color: var(--ttm-forest) !important; font-weight: 600 !important; }
+
+@media (max-width: 900px) {
+  body #section-login .section {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  body #section-login .section::before { display: none; }
+}
+
+/* ---------- Library page ---------- */
+
+body .section.products {
+  background: var(--ttm-beige) !important;
+  padding-top: 48px !important;
+}
+
+body .products__title {
+  font-family: var(--ttm-heading) !important;
+  font-weight: 800 !important;
+  font-size: 40px !important;
+  letter-spacing: -0.02em !important;
+  color: var(--ttm-ink) !important;
+}
+
+/* "Pick up where you left off" banner */
+body .resume-course__content {
+  background: var(--ttm-forest) !important;
+  border-radius: 28px !important;
+  padding: 28px 32px !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+body .resume-course__status {
+  color: var(--ttm-lime) !important;
+  font-family: var(--ttm-body) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+}
+
+body .resume-course__title {
+  color: #fff !important;
+  font-family: var(--ttm-heading) !important;
+  font-weight: 800 !important;
+  font-size: 22px !important;
+}
+
+body .resume-course__image img { border-radius: var(--ttm-radius-sm); }
+
+/* Course cards */
+body .product {
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: var(--ttm-radius-lg) !important;
+  overflow: hidden;
+  box-shadow: var(--ttm-shadow) !important;
+}
+
+body .product__image img { display: block; width: 100%; }
+
+body .product__content { padding: 22px 24px 26px !important; }
+
+body .product__title {
+  font-family: var(--ttm-body) !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  letter-spacing: 0 !important;
+  color: var(--ttm-ink) !important;
+}
+
+body .product__body { color: var(--ttm-muted) !important; }
+
+body .product__button .btn { padding: 12px 22px !important; }
+
+/* ---------- Encore footer ---------- */
+
+body .footer.background-dark,
+body .powered-by.background-dark {
+  background: var(--ttm-forest) !important;
+}
+
+body .footer .logo__image { max-height: 40px !important; width: auto; }
+
+body .footer .link-list__link,
+body .footer .copyright,
+body .powered-by a {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
