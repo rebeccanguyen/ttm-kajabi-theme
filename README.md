@@ -26,7 +26,7 @@ Courses to install on:
 - [x] Retirement Made Simple (Self Paced): Premier 7.11.0
 - [x] Retirement Made Simple – Live, Live Cohort 1: Premier 7.10.4
 
-Live version: `39702b2ee4848f61716b9bc620f6f9a9ba2352e7` (19 Nov 2026).
+Live version on courses: `39702b2ee4848f61716b9bc620f6f9a9ba2352e7`. Live version on the website template: `baeb2f0a3d695c9fb7d66a71782685869b70fb03` (19 Nov 2026).
 
 New cohorts get their own course template, so add the tag to each new cohort's template too.
 
@@ -42,10 +42,21 @@ IMS Self-Paced has a second, inactive template installed. Add the tag to that te
 
 Pinning a commit or tag means changes only go live when you choose. Pointing at `@main` instead updates automatically, but jsDelivr caches branches for several hours.
 
+## Login and library pages
+
+The site uses the **Streamlined Home** website template (Encore 2.x), which is live. The stylesheet is loaded from that template's **Settings → Custom Code → CSS** box:
+
+```css
+@import url("https://cdn.jsdelivr.net/gh/rebeccanguyen/ttm-kajabi-theme@COMMIT_OR_TAG/ttm.css");
+```
+
+- The left-hand brand panel on the login page is `assets/login-panel.jpg`. To change its wording or photo, re-export the image and commit it.
+- Site Details → Homepage is set to **Show the Library**, so academy.timtalksmoney.com goes to sign-in, not the template's demo homepage. Keep it that way unless a real homepage is built.
+- Removed from the template: the library's demo hero, Offer Storefront and link-list sections, and the header's About & Contact menu. The /about and /contact pages still exist but nothing links to them.
+
 ## What CSS can't change on Growth
 
-Layout structure (what appears where on the page) comes from the template code, which needs the Pro plan. The login and library pages need a website template installed in **Website → Design** before they can be styled.
-
+Layout structure (what appears where on the page) comes from the template code, which needs the Pro plan. 
 ## Brand
 
 | Token | Hex |
