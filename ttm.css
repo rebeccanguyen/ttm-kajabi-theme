@@ -132,6 +132,27 @@ body .btn--comment {
   color: #fff !important;
 }
 
+/* Lesson player Back / Next: the template sets these green with
+   .btn--solid.btn--simple-player, so match that specificity */
+body .btn--solid.btn--simple-player {
+  background: var(--ttm-ink) !important;
+  border-color: var(--ttm-ink) !important;
+  color: #fff !important;
+}
+
+body .btn--solid.btn--simple-player:hover,
+body .btn--solid.btn--simple-player:focus-visible {
+  background: var(--ttm-lime) !important;
+  border-color: var(--ttm-lime) !important;
+  color: var(--ttm-ink) !important;
+}
+
+body .btn--solid.btn--simple-player[disabled] {
+  background: var(--ttm-line) !important;
+  border-color: var(--ttm-line) !important;
+  color: var(--ttm-muted) !important;
+}
+
 /* All buttons: lime background, black text on hover */
 body .btn:hover,
 body .btn:focus-visible,
@@ -169,6 +190,31 @@ body .btn--completion {
 }
 
 body .btn--completion:hover {
+  background: var(--ttm-lime) !important;
+  border-color: var(--ttm-lime) !important;
+  color: var(--ttm-ink) !important;
+}
+
+/* Lesson marked complete: forest green, white text */
+body .btn--completion[data-post-completion-toggle="true"] {
+  background: var(--ttm-forest) !important;
+  border-color: var(--ttm-forest) !important;
+  color: #fff !important;
+}
+
+body .btn--completion[data-post-completion-toggle="true"]:hover {
+  background: var(--ttm-lime) !important;
+  border-color: var(--ttm-lime) !important;
+  color: var(--ttm-ink) !important;
+}
+
+body .btn--outline.btn--simple-player {
+  background: transparent !important;
+  border-color: var(--ttm-forest) !important;
+  color: var(--ttm-forest) !important;
+}
+
+body .btn--outline.btn--simple-player:hover {
   background: var(--ttm-lime) !important;
   border-color: var(--ttm-lime) !important;
   color: var(--ttm-ink) !important;
@@ -317,6 +363,45 @@ body .track--active .track__count {
 }
 
 body .track__thumb { border-radius: 8px; }
+
+/* "Next Module" link at the end of the playlist: TTM pill button */
+body .track.track--more,
+body .track.track--more:hover {
+  display: flex !important;
+  justify-content: center;
+  background: transparent !important;
+  border-bottom: 0 !important;
+  padding: 20px 16px !important;
+}
+
+body .track--more .media-body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+body .track--more .track__more {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 14px 28px !important;
+  background: var(--ttm-ink) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  font-family: var(--ttm-body) !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+body .track--more:hover .track__more,
+body .track--more:focus-visible .track__more {
+  background: var(--ttm-lime) !important;
+  color: var(--ttm-ink) !important;
+}
 
 body .player__nav {
   background: #fff !important;
